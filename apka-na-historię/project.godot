@@ -21,8 +21,12 @@ window/size/viewport_width=576
 window/size/viewport_height=1024
 window/size/window_width_override=288
 window/size/window_height_override=512
-window/stretch/aspect="keep_width"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
