@@ -1,43 +1,94 @@
-[gd_scene format=3 uid="uid://1v478tw1xxxq"]
+[gd_scene load_steps=4 format=3 uid="uid://1v478tw1xxxq"]
+
+[ext_resource type="Script" path="res://caculator.gd" id="1_oshx1"]
+[ext_resource type="Texture2D" uid="uid://j05jutapuu8u" path="res://Grafiki/Arrow.png" id="2_bxk3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_whxml"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oshx1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0.635294, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -41.0
-offset_top = -40.0
-offset_right = 41.0
+offset_top = 39.0
+offset_bottom = -88.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+text = "Kalkulator Chłopa
+"
+label_settings = SubResource("LabelSettings_whxml")
+horizontal_alignment = 1
 
-[node name="OptionButtonTo" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-item_count = 2
-popup/item_0/text = "Krowa"
-popup/item_1/text = "Kura"
-popup/item_1/id = 1
-
-[node name="OptionButtonFrom" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+[node name="OptionButtonFrom" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-item_count = 2
-popup/item_0/text = "Krowa"
-popup/item_1/text = "Kura"
-popup/item_1/id = 1
+size_flags_vertical = 4
+alignment = 1
+selected = 1
+item_count = 3
+popup/item_0/text = "Krowy"
+popup/item_1/text = "Kury"
+popup/item_2/text = "Świnie"
+popup/item_2/id = 2
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Ilość"
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_bxk3p")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="OptionButtonTo" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+selected = 1
+item_count = 3
+popup/item_0/text = "Krowy"
+popup/item_1/text = "Kury"
+popup/item_2/text = "Świnie"
+popup/item_2/id = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Input
+"
+label_settings = SubResource("LabelSettings_whxml")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Powrót"
+
+[connection signal="item_selected" from="VBoxContainer/OptionButtonFrom" to="." method="_on_option_button_from_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/OptionButtonTo" to="." method="_on_option_button_to_item_selected"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
