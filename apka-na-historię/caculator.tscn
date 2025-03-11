@@ -51,6 +51,7 @@ selected = 1
 item_count = 3
 popup/item_0/text = "Krowy"
 popup/item_1/text = "Kury"
+popup/item_1/id = 1
 popup/item_2/text = "Świnie"
 popup/item_2/id = 2
 
@@ -75,6 +76,7 @@ selected = 1
 item_count = 3
 popup/item_0/text = "Krowy"
 popup/item_1/text = "Kury"
+popup/item_1/id = 1
 popup/item_2/text = "Świnie"
 popup/item_2/id = 2
 
