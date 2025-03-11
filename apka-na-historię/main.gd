@@ -21,3 +21,7 @@ func _on_button_2_pressed():
 
 func _on_button_3_pressed():
 	get_tree().change_scene_to_file("res://Tts.tscn")
+
+
+func _on_button_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://kalendarz.tscn")

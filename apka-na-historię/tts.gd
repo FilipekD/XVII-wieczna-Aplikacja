@@ -9,15 +9,15 @@ func _ready():
 	for v in all_voices:
 		if v["language"].begins_with("pl"):
 			Voices.append(v)
-			$OptionButton.add_item(v["name"])
+			$VBoxContainer/OptionButton.add_item(v["name"])
 	if Voices.is_empty():
 		$Label.visible = true
 		print("Error: Brak dostępnych głosów TTS w języku polskim. Sprawdź ustawienia systemowe.")
 		print("Dostępne dłosy to: ", DisplayServer.tts_get_voices())
 
 func _on_button_pressed():
-	var text: String = $TextEdit.text
-	var VID: int = $OptionButton.get_selected_id()
+	var text: String = $VBoxContainer/TextEdit.text
+	var VID: int = $VBoxContainer/OptionButton.get_selected_id()
 	if VID >= 0 and VID < Voices.size():
 		var speaker: String = Voices[VID]["id"]
 		DisplayServer.tts_speak(text, speaker)
