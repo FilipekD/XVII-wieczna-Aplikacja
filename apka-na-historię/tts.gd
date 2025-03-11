@@ -16,7 +16,7 @@ func _ready():
 		print("Dostępne dłosy to: ", DisplayServer.tts_get_voices())
 
 func _on_button_pressed():
-	var text: String = $LineEdit.text
+	var text: String = $TextEdit.text
 	var VID: int = $OptionButton.get_selected_id()
 	if VID >= 0 and VID < Voices.size():
 		var speaker: String = Voices[VID]["id"]

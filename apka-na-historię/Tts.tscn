@@ -21,12 +21,13 @@ grow_horizontal = 2
 text = "Brak paczek językowych!"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 91.0
-offset_right = 277.0
-offset_bottom = 209.0
+offset_right = 275.0
+offset_bottom = 210.0
+wrap_mode = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
