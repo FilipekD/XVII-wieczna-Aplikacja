@@ -61,12 +61,16 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Kalendarz Upraw"
 
-[node name="Button5" type="Button" parent="VBoxContainer"]
-modulate = Color(1, 1, 1, 0)
+[node name="Button6" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+text = "Wyszukiwarka posagu"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button6" to="." method="_on_button_6_pressed"]

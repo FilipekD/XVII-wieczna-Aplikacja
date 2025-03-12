@@ -30,13 +30,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 39.0
-offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "Kalkulator Chłopa
 "
 label_settings = SubResource("LabelSettings_whxml")
@@ -45,19 +44,30 @@ horizontal_alignment = 1
 [node name="OptionButtonFrom" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
+size_flags_vertical = 6
 alignment = 1
 selected = 1
-item_count = 3
+item_count = 8
 popup/item_0/text = "Krowy"
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
 popup/item_2/id = 2
+popup/item_3/text = "Owce"
+popup/item_3/id = 3
+popup/item_4/text = "Kozy"
+popup/item_4/id = 4
+popup/item_5/text = "Konie"
+popup/item_5/id = 5
+popup/item_6/text = "Kaczki"
+popup/item_6/id = 6
+popup/item_7/text = "Kobieta"
+popup/item_7/id = 7
 
 [node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 placeholder_text = "Ilość"
 alignment = 1
 
@@ -66,22 +76,33 @@ layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("2_bxk3p")
 expand_mode = 1
-stretch_mode = 6
 
 [node name="OptionButtonTo" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 selected = 1
-item_count = 3
+item_count = 8
 popup/item_0/text = "Krowy"
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
 popup/item_2/id = 2
+popup/item_3/text = "Owce"
+popup/item_3/id = 3
+popup/item_4/text = "Kozy"
+popup/item_4/id = 4
+popup/item_5/text = "Konie"
+popup/item_5/id = 5
+popup/item_6/text = "Kaczki"
+popup/item_6/id = 6
+popup/item_7/text = "Kobieta"
+popup/item_7/id = 7
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "Input
 "
 label_settings = SubResource("LabelSettings_whxml")
@@ -89,6 +110,7 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Powrót"
 
 [connection signal="item_selected" from="VBoxContainer/OptionButtonFrom" to="." method="_on_option_button_from_item_selected"]

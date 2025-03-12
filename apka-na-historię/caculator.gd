@@ -8,8 +8,14 @@ extends Control
 var animal_values = {
 	"Kury": 1,
 	"Krowy": 10,
-	"Świnie": 5
-}
+	"Świnie": 5,
+	"Owce": 7,
+	"Kozy": 6,
+	"Konie": 15,
+	"Kaczki": 2,
+	"Kobieta": 200
+};
+
 
 func _ready():
 	wynik.text = "1"

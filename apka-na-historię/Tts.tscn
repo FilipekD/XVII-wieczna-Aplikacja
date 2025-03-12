@@ -31,18 +31,30 @@ grow_vertical = 2
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Wróć"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 wrap_mode = 1
 
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Tłumacz"
 
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
