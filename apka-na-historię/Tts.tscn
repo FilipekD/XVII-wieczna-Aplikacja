@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwfh7mwmhnw5n"]
+[gd_scene load_steps=4 format=3 uid="uid://dwfh7mwmhnw5n"]
 
 [ext_resource type="Script" uid="uid://cx7mcm00mgrqq" path="res://tts.gd" id="1_qt8uo"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_55ufj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_55ufj"]
+font_size = 20
+font_color = Color(1, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,16 +26,6 @@ offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.882051, 0.954777, 0.768596, 1)
-
-[node name="Label" type="Label" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-text = "Brak paczek językowych!"
-horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
@@ -80,6 +74,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 text = "Tłumacz"
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Brak paczek językowych!
+Sprawdź ustawienia"
+label_settings = SubResource("LabelSettings_55ufj")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

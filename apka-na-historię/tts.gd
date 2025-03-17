@@ -4,7 +4,7 @@ var Voices: Array[Dictionary] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.visible = false
+	$VBoxContainer/Label4.visible = false
 	var all_voices = DisplayServer.tts_get_voices()
 	for v in all_voices:
 		if v["language"].begins_with("pl"):
@@ -23,7 +23,7 @@ func _ready():
 
 
 	if Voices.is_empty():
-		$Label.visible = true
+		$VBoxContainer/Label4.visible = true
 		print("Error: Brak dostępnych głosów TTS w języku polskim. Sprawdź ustawienia systemowe.")
 		print("Dostępne dłosy to: ", DisplayServer.tts_get_voices())
 
