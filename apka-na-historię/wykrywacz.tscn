@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcfmye6hkmvek"]
 
-[ext_resource type="Script" path="res://wykrywacz.gd" id="1_nd0qh"]
+[ext_resource type="Script" uid="uid://culw01ofcnidr" path="res://wykrywacz.gd" id="1_nd0qh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

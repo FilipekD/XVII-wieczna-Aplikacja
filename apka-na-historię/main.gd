@@ -29,3 +29,7 @@ func _on_button_4_pressed() -> void:
 
 func _on_button_6_pressed():
 	get_tree().change_scene_to_file("res://szukaj_posagu.tscn")
+
+
+func _on_button_7_pressed() -> void:
+	get_tree().change_scene_to_file("res://mapa.tscn")
