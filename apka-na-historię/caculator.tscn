@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://1v478tw1xxxq"]
+[gd_scene load_steps=7 format=3 uid="uid://1v478tw1xxxq"]
 
-[ext_resource type="Script" uid="uid://cwg14n7y6mmps" path="res://caculator.gd" id="1_oshx1"]
+[ext_resource type="Script" path="res://caculator.gd" id="1_oshx1"]
 [ext_resource type="Texture2D" uid="uid://j05jutapuu8u" path="res://Grafiki/Arrow.png" id="2_bxk3p"]
+[ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="2_t2m5p"]
 [ext_resource type="Texture2D" uid="uid://bhwqf36jkv57l" path="res://kalkulator chłopa.png" id="3_p5xce"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="4_yxw67"]
 
@@ -47,11 +48,13 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_t2m5p")
+theme_override_font_sizes/font_size = 25
 alignment = 1
 selected = 1
 item_count = 8
 popup/item_0/text = "Krowy"
-popup/item_0/id = 0
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
@@ -71,6 +74,9 @@ popup/item_7/id = 7
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_t2m5p")
+theme_override_font_sizes/font_size = 25
 placeholder_text = "Ilość"
 alignment = 1
 
@@ -84,11 +90,13 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_t2m5p")
+theme_override_font_sizes/font_size = 25
 alignment = 1
 selected = 1
 item_count = 8
 popup/item_0/text = "Krowy"
-popup/item_0/id = 0
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
@@ -113,8 +121,8 @@ label_settings = SubResource("LabelSettings_whxml")
 horizontal_alignment = 1
 
 [node name="KalkulatorChłopa" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(152, 61)
-scale = Vector2(0.368388, 0.207257)
+position = Vector2(147, 57)
+scale = Vector2(0.238822, 0.216176)
 texture = ExtResource("3_p5xce")
 
 [node name="Button" type="Button" parent="."]

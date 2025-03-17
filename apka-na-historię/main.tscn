@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://08fj6wqbn6nv"]
+[gd_scene load_steps=9 format=3 uid="uid://08fj6wqbn6nv"]
 
-[ext_resource type="Script" uid="uid://cgoo6i5r3u44w" path="res://main.gd" id="1_vsveo"]
+[ext_resource type="Script" path="res://main.gd" id="1_vsveo"]
 [ext_resource type="Texture2D" uid="uid://dg0jg2rqgq2py" path="res://Grafiki/Korybut-Wiśniowiecki-299922839-removebg-preview.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cshsbelvnly8r" path="res://Grafiki/background_med.png" id="2_b7ms7"]
 [ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cyfmh8ct0fy6e" path="res://Grafiki/wisnia_rolki.png" id="4_7euds"]
+[ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="4_cxmix"]
+[ext_resource type="Texture2D" uid="uid://b237q0o0tw80e" path="res://Grafiki/przybornik logo.png" id="6_0331p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_72kdu"]
 font_size = 32
@@ -17,7 +21,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vsveo")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b7ms7")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,11 +51,28 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 29
 
+[node name="logo" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(288, 95)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="logo" type="Sprite2D" parent="VBoxContainer/logo"]
+position = Vector2(145, 53)
+scale = Vector2(0.169952, 0.169952)
+texture = ExtResource("6_0331p")
+
+[node name="wiśniarz" type="Sprite2D" parent="VBoxContainer/logo"]
+position = Vector2(146, 103)
+scale = Vector2(0.162474, 0.162474)
+texture = ExtResource("4_7euds")
+
 [node name="Label" type="Label" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 6
-text = "XVII wieczny 
-przybornik "
+text = "
+
+"
 label_settings = SubResource("LabelSettings_72kdu")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -49,35 +82,40 @@ texture_repeat = 1
 layout_mode = 2
 size_flags_vertical = 6
 theme = ExtResource("2_h2yge")
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_cxmix")
 text = "Kalkulator"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_h2yge")
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_cxmix")
 text = "Analfabeta mode"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_h2yge")
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_cxmix")
 text = "Kalendarz Upraw"
 
 [node name="Button6" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_h2yge")
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_cxmix")
 text = "Szukasz żony?"
 
 [node name="Button7" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_h2yge")
-theme_override_constants/outline_size = 10
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_cxmix")
 text = "Mapa"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
@@ -89,6 +127,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_0xm2m")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 55.0
 offset_top = 92.0
