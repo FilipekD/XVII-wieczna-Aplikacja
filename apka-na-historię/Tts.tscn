@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwfh7mwmhnw5n"]
+[gd_scene load_steps=3 format=3 uid="uid://dwfh7mwmhnw5n"]
 
 [ext_resource type="Script" uid="uid://cx7mcm00mgrqq" path="res://tts.gd" id="1_qt8uo"]
+[ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_55ufj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,15 +34,13 @@ text = "Brak paczek językowych!"
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
-layout_mode = 2
-offset_left = 4.0
-offset_top = 6.0
-offset_right = 221.0
-offset_bottom = 85.0
+layout_mode = 1
+offset_right = 220.0
+offset_bottom = 144.0
 scale = Vector2(0.249894, 0.319124)
 size_flags_vertical = 3
+theme = ExtResource("2_55ufj")
 theme_override_font_sizes/font_size = 39
-text = "Wróć"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://1v478tw1xxxq"]
+[gd_scene load_steps=6 format=3 uid="uid://1v478tw1xxxq"]
 
 [ext_resource type="Script" uid="uid://cwg14n7y6mmps" path="res://caculator.gd" id="1_oshx1"]
 [ext_resource type="Texture2D" uid="uid://j05jutapuu8u" path="res://Grafiki/Arrow.png" id="2_bxk3p"]
 [ext_resource type="Texture2D" uid="uid://bhwqf36jkv57l" path="res://kalkulator chłopa.png" id="3_p5xce"]
+[ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="4_yxw67"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_whxml"]
 font_size = 24
@@ -111,16 +112,22 @@ text = "Input
 label_settings = SubResource("LabelSettings_whxml")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Powrót"
-
 [node name="KalkulatorChłopa" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(152, 61)
 scale = Vector2(0.368388, 0.207257)
 texture = ExtResource("3_p5xce")
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 69.0
+grow_vertical = 0
+size_flags_vertical = 3
+theme = ExtResource("4_yxw67")
+
 [connection signal="item_selected" from="VBoxContainer/OptionButtonFrom" to="." method="_on_option_button_from_item_selected"]
 [connection signal="item_selected" from="VBoxContainer/OptionButtonTo" to="." method="_on_option_button_to_item_selected"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
