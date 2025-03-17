@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dwfh7mwmhnw5n"]
 
-[ext_resource type="Script" path="res://tts.gd" id="1_qt8uo"]
+[ext_resource type="Script" uid="uid://cx7mcm00mgrqq" path="res://tts.gd" id="1_qt8uo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +10,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qt8uo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.882051, 0.954777, 0.768596, 1)
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -21,18 +32,30 @@ grow_horizontal = 2
 text = "Brak paczek językowych!"
 horizontal_alignment = 1
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 221.0
+offset_bottom = 85.0
+scale = Vector2(0.249894, 0.319124)
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 39
+text = "Wróć"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = 0.1
+anchor_right = 0.83
+anchor_bottom = 0.9
+offset_left = 8.4
+offset_top = -5.2
+offset_right = 8.40001
+offset_bottom = -5.20001
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Wróć"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -40,6 +63,8 @@ layout_mode = 2
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 13
+placeholder_text = "Dobrodzieju, racz wpisać, coć na sercu leży, a ja kmieciowi wieść tę przekażę."
 wrap_mode = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
@@ -57,5 +82,5 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Tłumacz"
 
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
