@@ -13,7 +13,7 @@ var animal_values = {
 	"Kozy": 6,
 	"Konie": 15,
 	"Kaczki": 2,
-	"Kobieta": 200
+	"Kobieta": 100
 };
 
 
