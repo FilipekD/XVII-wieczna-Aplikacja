@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4dgn6hgoev1x"]
+[gd_scene load_steps=7 format=3 uid="uid://d4dgn6hgoev1x"]
 
 [ext_resource type="Script" uid="uid://god5ldnuxse5" path="res://szukaj_posagu.gd" id="1_5y0x1"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_bwuyo"]
 [ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="2_p0vff"]
 [ext_resource type="Texture2D" uid="uid://b1h6v2axa5tj8" path="res://Grafiki/image-removebg-preview (9).png" id="2_qanqv"]
 [ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="3_q7gep"]
+[ext_resource type="Script" uid="uid://f4bh8klb1b7m" path="res://check_buton_code.gd" id="5_wlvuf"]
 
 [node name="Szukaj posagu" type="Control"]
 layout_mode = 3
@@ -66,27 +67,37 @@ theme_override_font_sizes/font_size = 80
 text = "Czy żona musi być:"
 horizontal_alignment = 1
 
-[node name="młoda" type="CheckBox" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="młoda" type="CheckBox" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_q7gep")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "Młoda"
 alignment = 1
+expand_icon = true
+script = ExtResource("5_wlvuf")
 
-[node name="ładna" type="CheckBox" parent="VBoxContainer"]
+[node name="ładna" type="CheckBox" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_q7gep")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "Ładna"
 alignment = 1
+script = ExtResource("5_wlvuf")
 
-[node name="kobieta" type="CheckBox" parent="VBoxContainer"]
+[node name="kobieta" type="CheckBox" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_q7gep")
-theme_override_font_sizes/font_size = 50
-button_pressed = true
+theme_override_font_sizes/font_size = 60
 text = "Kobietą"
 alignment = 1
+script = ExtResource("5_wlvuf")
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -109,10 +120,10 @@ offset_right = 205.0
 offset_bottom = 218.0
 theme = ExtResource("2_bwuyo")
 
-[connection signal="pressed" from="VBoxContainer/młoda" to="." method="_on_młoda_pressed"]
-[connection signal="toggled" from="VBoxContainer/młoda" to="." method="_on_młoda_toggled"]
-[connection signal="pressed" from="VBoxContainer/ładna" to="." method="_on_ładna_pressed"]
-[connection signal="toggled" from="VBoxContainer/ładna" to="." method="_on_ładna_toggled"]
-[connection signal="pressed" from="VBoxContainer/kobieta" to="." method="_on_kobieta_pressed"]
-[connection signal="toggled" from="VBoxContainer/kobieta" to="." method="_on_kobieta_toggled"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/młoda" to="." method="_on_młoda_pressed"]
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/młoda" to="." method="_on_młoda_toggled"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/ładna" to="." method="_on_ładna_pressed"]
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/ładna" to="." method="_on_ładna_toggled"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/kobieta" to="." method="_on_kobieta_pressed"]
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/kobieta" to="." method="_on_kobieta_toggled"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
