@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c58t36absvsau"]
+[gd_scene load_steps=4 format=3 uid="uid://c58t36absvsau"]
 
 [ext_resource type="Script" uid="uid://cqqlfi0dpj8d4" path="res://mapa.gd" id="1_lrjei"]
-[ext_resource type="Texture2D" uid="uid://chvb16pow6el6" path="res://Grafiki/wielka-lechia-1210x642.jpg" id="1_q8ihy"]
-[ext_resource type="Texture2D" uid="uid://dg0jg2rqgq2py" path="res://Grafiki/Korybut-Wiśniowiecki-299922839-removebg-preview.png" id="2_lrjei"]
-[ext_resource type="Texture2D" uid="uid://dhcm0mgb7x80l" path="res://Grafiki/gesturing-hand-good-free-png.webp" id="3_5d3jg"]
+[ext_resource type="Texture2D" uid="uid://dmahmn7knscsm" path="res://Grafiki/mapka.png" id="3_q8ihy"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="5_5d3jg"]
 
 [node name="mapa" type="Control"]
@@ -15,24 +13,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lrjei")
 
-[node name="Wielka-lechia-1210x642" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(144, 255)
-rotation = 1.5708
-scale = Vector2(0.44, 0.44)
-texture = ExtResource("1_q8ihy")
-
-[node name="Korybut-wiśniowiecki-299922839-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(77, 56)
-rotation = 1.5708
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_lrjei")
-
-[node name="Gesturing-hand-good-free-png" type="Sprite2D" parent="."]
-position = Vector2(66, 135)
-rotation = 1.309
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_5d3jg")
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q8ihy")
+expand_mode = 5
+stretch_mode = 6
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1

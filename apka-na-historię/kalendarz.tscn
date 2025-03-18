@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://x84ypxl3ex6v"]
+[gd_scene load_steps=7 format=3 uid="uid://x84ypxl3ex6v"]
 
 [ext_resource type="Script" uid="uid://utkfm27mski8" path="res://kalendarz.gd" id="1_bsy61"]
 [ext_resource type="Texture2D" uid="uid://bypl8pg83ik1u" path="res://Grafiki/kalendarz.png" id="2_du4sa"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_fc1q3"]
+[ext_resource type="Texture2D" uid="uid://cshsbelvnly8r" path="res://Grafiki/background_med.png" id="2_wjtfh"]
+[ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="3_em6cg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c0l8c"]
-font_size = 24
+font_size = 120
 font_color = Color(0, 0, 0, 1)
 
 [node name="Kalendarz" type="Control"]
@@ -26,6 +28,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.882353, 0.952941, 0.768627, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wjtfh")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -36,6 +49,9 @@ grow_vertical = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_em6cg")
+theme_override_font_sizes/font_size = 120
 text = "
 Kalendarz Upraw"
 label_settings = SubResource("LabelSettings_c0l8c")
@@ -45,7 +61,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("2_du4sa")
-expand_mode = 1
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Button" type="Button" parent="."]

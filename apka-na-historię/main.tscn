@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://08fj6wqbn6nv"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_vsveo"]
+[ext_resource type="Script" uid="uid://cgoo6i5r3u44w" path="res://main.gd" id="1_vsveo"]
 [ext_resource type="Texture2D" uid="uid://dg0jg2rqgq2py" path="res://Grafiki/Korybut-Wiśniowiecki-299922839-removebg-preview.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cshsbelvnly8r" path="res://Grafiki/background_med.png" id="2_b7ms7"]
 [ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="2_h2yge"]
@@ -54,17 +54,30 @@ theme_override_constants/separation = 29
 [node name="logo" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(288, 95)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_vertical = 3
 
-[node name="logo" type="Sprite2D" parent="VBoxContainer/logo"]
-position = Vector2(145, 53)
-scale = Vector2(0.169952, 0.169952)
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/logo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/logo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("6_0331p")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="wiśniarz" type="Sprite2D" parent="VBoxContainer/logo"]
-position = Vector2(146, 103)
-scale = Vector2(0.162474, 0.162474)
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/logo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.22
 texture = ExtResource("4_7euds")
+expand_mode = 3
+stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 visible = false
@@ -80,7 +93,7 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="VBoxContainer"]
 texture_repeat = 1
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 3
 theme = ExtResource("2_h2yge")
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("4_cxmix")
@@ -122,8 +135,7 @@ text = "Mapa"
 layout_mode = 2
 
 [node name="Korybut-wiśniowiecki-299922839-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(29, 466)
-scale = Vector2(0.2, 0.2)
+position = Vector2(61, 731)
 texture = ExtResource("2_0xm2m")
 
 [node name="Label" type="Label" parent="."]

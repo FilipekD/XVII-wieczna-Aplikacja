@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://1v478tw1xxxq"]
+[gd_scene load_steps=9 format=3 uid="uid://1v478tw1xxxq"]
 
-[ext_resource type="Script" path="res://caculator.gd" id="1_oshx1"]
+[ext_resource type="Script" uid="uid://cwg14n7y6mmps" path="res://caculator.gd" id="1_oshx1"]
 [ext_resource type="Texture2D" uid="uid://j05jutapuu8u" path="res://Grafiki/Arrow.png" id="2_bxk3p"]
+[ext_resource type="Texture2D" uid="uid://cshsbelvnly8r" path="res://Grafiki/background_med.png" id="2_ndehy"]
 [ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="2_t2m5p"]
 [ext_resource type="Texture2D" uid="uid://bhwqf36jkv57l" path="res://kalkulator chłopa.png" id="3_p5xce"]
+[ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="4_yjxe0"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="4_yxw67"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_whxml"]
@@ -28,6 +30,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.882353, 0.952941, 0.768627, 1)
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ndehy")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -36,25 +49,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 6
-text = "
-"
-label_settings = SubResource("LabelSettings_whxml")
-horizontal_alignment = 1
+texture = ExtResource("3_p5xce")
+expand_mode = 5
+stretch_mode = 6
 
 [node name="OptionButtonFrom" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_vertical = 3
+theme = ExtResource("4_yjxe0")
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_t2m5p")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 120
 alignment = 1
 selected = 1
 item_count = 8
 popup/item_0/text = "Krowy"
+popup/item_0/id = 0
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
@@ -76,7 +89,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_t2m5p")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 120
 placeholder_text = "Ilość"
 alignment = 1
 
@@ -90,13 +103,15 @@ expand_mode = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("4_yjxe0")
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_t2m5p")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 120
 alignment = 1
 selected = 1
 item_count = 8
 popup/item_0/text = "Krowy"
+popup/item_0/id = 0
 popup/item_1/text = "Kury"
 popup/item_1/id = 1
 popup/item_2/text = "Świnie"
@@ -115,15 +130,10 @@ popup/item_7/id = 7
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Input
+text = "
 "
 label_settings = SubResource("LabelSettings_whxml")
 horizontal_alignment = 1
-
-[node name="KalkulatorChłopa" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(147, 57)
-scale = Vector2(0.238822, 0.216176)
-texture = ExtResource("3_p5xce")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
