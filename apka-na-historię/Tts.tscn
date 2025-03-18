@@ -80,6 +80,7 @@ size_flags_vertical = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_nyudw")
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("4_0d1t3")
 text = "Tłumacz"
 
