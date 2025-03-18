@@ -19,15 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bsy61")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.882353, 0.952941, 0.768627, 1)
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -66,8 +57,12 @@ stretch_mode = 5
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-offset_right = 42.0
-offset_bottom = 42.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -255.0
+offset_right = 255.0
+grow_vertical = 0
 theme = ExtResource("2_fc1q3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

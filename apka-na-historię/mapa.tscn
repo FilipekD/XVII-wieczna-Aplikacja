@@ -27,8 +27,8 @@ stretch_mode = 6
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
-offset_right = 43.0
-offset_bottom = 43.0
+offset_right = 214.0
+offset_bottom = 214.0
 theme = ExtResource("5_5d3jg")
 theme_override_font_sizes/font_size = 25
 

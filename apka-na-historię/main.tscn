@@ -135,7 +135,7 @@ text = "Mapa"
 layout_mode = 2
 
 [node name="Korybut-wiśniowiecki-299922839-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(61, 731)
+position = Vector2(117, 2475)
 texture = ExtResource("2_0xm2m")
 
 [node name="Label" type="Label" parent="."]

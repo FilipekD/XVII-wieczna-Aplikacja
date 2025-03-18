@@ -21,15 +21,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oshx1")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.882353, 0.952941, 0.768627, 1)
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -130,6 +121,8 @@ popup/item_7/id = 7
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_t2m5p")
+theme_override_font_sizes/font_size = 60
 text = "
 "
 label_settings = SubResource("LabelSettings_whxml")
@@ -140,8 +133,8 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -64.0
-offset_right = 69.0
+offset_top = -282.0
+offset_right = 304.0
 grow_vertical = 0
 size_flags_vertical = 3
 theme = ExtResource("4_yxw67")

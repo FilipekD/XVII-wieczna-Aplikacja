@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwfh7mwmhnw5n"]
+[gd_scene load_steps=7 format=3 uid="uid://dwfh7mwmhnw5n"]
 
 [ext_resource type="Script" uid="uid://cx7mcm00mgrqq" path="res://tts.gd" id="1_qt8uo"]
+[ext_resource type="Texture2D" uid="uid://cshsbelvnly8r" path="res://Grafiki/background_med.png" id="2_0d1t3"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_55ufj"]
 [ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="3_nyudw"]
 [ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="4_0d1t3"]
@@ -18,21 +19,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qt8uo")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.882051, 0.954777, 0.768596, 1)
+texture = ExtResource("2_0d1t3")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 1
-offset_right = 220.0
-offset_bottom = 144.0
+offset_right = 1058.0
+offset_bottom = 693.0
 scale = Vector2(0.249894, 0.319124)
 size_flags_vertical = 3
 theme = ExtResource("2_55ufj")

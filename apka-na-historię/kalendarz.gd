@@ -5,8 +5,7 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
-	$Button.set_size(Vector2(get_viewport_rect().size.x/5, get_viewport_rect().size.x/5))
+
 
 
 

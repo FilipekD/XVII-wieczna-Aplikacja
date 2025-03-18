@@ -50,8 +50,7 @@ func generate_posag():
 	
 	posag_label.text = posag_text
 
-func _process(delta: float) -> void:
-	$Button.set_size(Vector2(get_viewport_rect().size.x/5, get_viewport_rect().size.x/5))
+
 
 func _on_kobieta_pressed() -> void:
 	

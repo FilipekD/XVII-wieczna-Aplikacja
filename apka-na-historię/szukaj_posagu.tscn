@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4dgn6hgoev1x"]
+[gd_scene load_steps=6 format=3 uid="uid://d4dgn6hgoev1x"]
 
 [ext_resource type="Script" uid="uid://god5ldnuxse5" path="res://szukaj_posagu.gd" id="1_5y0x1"]
 [ext_resource type="Theme" uid="uid://bw7ilf5hfndtk" path="res://Grafiki/home_button.tres" id="2_bwuyo"]
+[ext_resource type="Theme" uid="uid://bsg8uqpbqn2na" path="res://Grafiki/button.tres" id="2_p0vff"]
 [ext_resource type="Texture2D" uid="uid://b1h6v2axa5tj8" path="res://Grafiki/image-removebg-preview (9).png" id="2_qanqv"]
+[ext_resource type="FontFile" uid="uid://bmii1211yxrl3" path="res://Grafiki/MedievalSharp-Regular.ttf" id="3_q7gep"]
 
 [node name="Szukaj posagu" type="Control"]
 layout_mode = 3
@@ -31,41 +33,57 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
+texture = ExtResource("2_qanqv")
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/TextureRect"]
+layout_mode = 2
+offset_top = 4.0
+offset_right = 1220.0
+offset_bottom = 417.0
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 100
 text = "Wyszukiwarka posagu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_p0vff")
+theme_override_font_sizes/font_size = 60
 placeholder_text = "Nazwisko rodowe żony"
 alignment = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 80
 text = "Czy żona musi być:"
 horizontal_alignment = 1
 
 [node name="młoda" type="CheckBox" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 50
 text = "Młoda"
 alignment = 1
 
 [node name="ładna" type="CheckBox" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 50
 text = "Ładna"
 alignment = 1
 
 [node name="kobieta" type="CheckBox" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 50
 button_pressed = true
 text = "Kobietą"
 alignment = 1
@@ -73,24 +91,22 @@ alignment = 1
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_p0vff")
+theme_override_fonts/font = ExtResource("3_q7gep")
 text = "Szukaj"
 
 [node name="Label4" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("3_q7gep")
+theme_override_font_sizes/font_size = 80
 text = "Wynik"
 horizontal_alignment = 1
 
-[node name="Image-removebg-preview(9)" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(145, 96)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_qanqv")
-
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-offset_right = 61.0
-offset_bottom = 65.0
+offset_right = 205.0
+offset_bottom = 218.0
 theme = ExtResource("2_bwuyo")
 
 [connection signal="pressed" from="VBoxContainer/młoda" to="." method="_on_młoda_pressed"]
